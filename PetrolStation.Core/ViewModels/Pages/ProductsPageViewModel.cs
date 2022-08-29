@@ -30,6 +30,7 @@ namespace PetrolStation.Core
         }
         public void ProductAndPriceAssign()
         {
+           // AddNewProductCommand = new RelayCommand(ProductAndPriceAssign);
             string[] uu = productDetailsFromTextFile;
             int counter = 0;
             foreach (var line in uu)

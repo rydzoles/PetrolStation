@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Text;
+using System.Windows.Input;
 
 namespace PetrolStation
 {
@@ -10,13 +12,15 @@ namespace PetrolStation
     {
         ProductViewModel productVIewModel { get; set; }
         public static string[] productDetailsFromTextFile { get; set; }
-        public  List<ProductViewModel> finallLIst = new List<ProductViewModel>();
-        static string name { get; set; }
-        static double price { get; set; }
+        public ObservableCollection<ProductViewModel> finallLIst = new ObservableCollection<ProductViewModel>();
+        public string name { get; set; }
+        public double price { get; set; }
+        public ICommand AddListCommand { get; set; }
         public ProductFromFileViewModel()
         {
             
             GetProductInformationFromFile("FuelType.txt");
+            AddListCommand = new RelayCommand(ProductAndPriceAssign);
         }
       public void GetProductInformationFromFile(string path)
         {

@@ -7,16 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="222" Height="111">
-            <ListView ItemsSource="{Binding finallLIst}" >
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn DisplayMemberBinding="{Binding name}" Header="Paliwa" ></GridViewColumn>
-                        <GridViewColumn DisplayMemberBinding="{Binding price}" Header="cena" ></GridViewColumn>
-
-                    </GridView>
-                </ListView.View>
-            </ListView>
-        </StackPanel>
+        <TextBlock Text="{Binding name}"/>
+        <TextBlock Text="{Binding price}"/>
     </Grid>
 </UserControl>
