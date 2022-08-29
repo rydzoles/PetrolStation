@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Nowy folder\" />
+    <ProjectReference Include="..\PetrolStation.Core\PetrolStation.Core.csproj" />
   </ItemGroup>
 
 </Project>
